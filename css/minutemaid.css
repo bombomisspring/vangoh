@@ -1,0 +1,572 @@
+@charset "utf-8";
+
+/*모바일용 CSS*/
+/*기본 CSS*/
+.container {
+	width:90%;
+	max-width:1132px;
+	margin:0 auto;
+}
+
+.cfixed:after, .container:after {
+	display:block;
+	content:'';
+	clear:both;
+}
+
+.sec-tit {
+	font-size : 40px;
+	color: #b1c936;
+	font-family: 'Bitter', serif;
+}
+
+.blind {
+	position:absolute;
+	width:0;
+	height:0;
+	line-height:0;
+	text-indent:-999999999px;
+	overflow:hidden;
+}
+
+.divider {
+	width:90%;
+	max-width:1132px;
+	margin:0 auto;
+	background-color:#c3c3c3;
+	
+}
+
+.m-divider {
+	width:40px;
+	margin:0 auto;
+	margin-top:77px;
+	background-color:#b1c936;
+}
+
+.footer_logo {
+	width:86px;
+	text-align:center;
+	margin:0 auto;
+	padding: 10px 0 5px;
+}
+
+
+
+/*헤더영역 CSS*/
+
+.header {
+	position:relative;
+	padding:20px 5%;
+}
+
+.header .logo {
+	float:left;
+	width:100px;
+}
+.header .gnb {
+	position:absolute;
+	top:100%;
+	left:0;
+	width:100%;
+	background-color:#b1c936;
+	display:none;	
+}
+
+.header .gnb li {border-bottom:1px solid #fff;}
+
+.header .gnb li a {
+	display:block;
+	padding:14px 0 14px 5%;
+	font-size: 14px;
+	color:#fff;
+}
+
+.header .menu-toggle-btn {
+	float:right;
+	width:20px;
+	margin-top:25px; /*로고와 크기 맞추려면 여기서 수정*/
+	cursor:pointer;
+}
+
+.header .menu-toggle-btn span {
+	display:block;
+	width:100%;
+	height:2px;
+	background-color:#b1c936;
+}
+
+.header .menu-toggle-btn span:nth-child(2) {
+	margin: 5px 0;
+}
+
+
+/*메인 비주얼 배너 영역*/
+
+.slider img {
+	display:block;
+	width:100%;
+	max-width:100%;
+	height:auto;
+}
+
+
+/*디스플레이 영역*/
+.display-section {
+	margin-top:60px;
+	text-align:center;
+}
+
+.display-section .sec-tit {
+	margin-bottom:30px;
+}
+
+.display-section .desc {
+	font-family: 'Nanum Gothic', sans-serif;
+	color:#616161;
+	line-height:1.9;
+}
+
+
+/*프로모션 영역*/
+
+.promotion-section {
+	margin-top:68px;
+	margin-bottom:50px;
+}
+
+.promotion-section .promo-list li {
+	margin-top:50px;
+	text-align:center;
+}
+
+.promotion-section .promo-list li:first-child {
+	margin-top:0px;
+}
+
+.promotion-section .promo-list li img {
+	height:95px;
+}
+
+.promotion-section .promo-list li h3 {
+	margin:30px 0 20px 0;
+	color:#b1c936;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.promotion-section .promo-list li p {
+	font-size:14px;
+	font-family: 'Nanum Gothic', sans-serif;
+	line-height:1.5;
+	color:#666;
+}
+
+
+/*포토 영역*/
+
+.photo-section {
+	margin-top:70px;
+}
+
+.photo-section .sec-tit {
+	width:90%;
+	max-width:1132px;
+	margin:0 auto;
+	margin-bottom:30px;
+	text-align:center;
+}
+
+.photo-section .photo-list li {
+	width:100%;	
+}
+
+.photo-section .photo-list li img {
+	display:block;
+	width:100%;
+	max-width:100%;
+	height:auto;
+}
+
+.photo-section .photo-list li a{
+	display:block;
+	width:100%;
+	height:100%;
+	position:relative;
+}
+
+.photo-section .photo-list li a:before{
+	display:block;
+	position:absolute;
+	top:0; left:0;
+	width:100%; height:100%;
+	background-color:#b1c936;
+	content:'';
+	opacity:0;
+	z-index:10;
+	transition: all 0.3s;
+	/* 트렌지션 값 입력 */
+}
+
+.photo-section .photo-list li a:hover:before{
+	opacity:0.86;
+}
+
+.photo-section .photo-list li .info  {
+	position:absolute;
+	top:0; left:25px;
+	opacity:0;
+	z-index:20;
+	transition: all 0.4s;
+	/*트렌지션 값 입력*/
+}
+
+.photo-section .photo-list li a:hover .info {
+	transform:translateY(25px);
+	opacity:1;
+}
+
+.photo-section .photo-list li .info h3 {
+	color:#fff;
+	font-size:24px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+.photo-section .photo-list li .info span {
+	color:#fff;
+}
+
+
+/*리뷰 영역*/
+
+.blog-section {
+	margin-top:70px;
+}
+
+.blog-section .sec-tit {
+	margin-bottom:50px;
+	text-align:center;
+}
+.blog-section .blog-list li {
+	width:100%;
+	margin-top:50px;
+	
+}
+.blog-section .blog-list li:first-child {
+	margin-top:0;
+}
+
+.blog-section .blog-list li img {
+	display:block;
+	width:100%; height:auto;
+}
+
+.blog-section .blog-list li time {
+	display:block;
+	margin:10px 0;
+	font-size:11px;
+	color:#ccc;
+}
+
+.blog-section .blog-list li h3 {
+	color:#444;
+	line-height:1.5;
+	
+}
+
+
+/*연락처 영역*/
+
+.contact-section {
+	margin-top:100px;
+}
+
+.contact-section .sec-tit {
+	margin-bottom:50px;
+	text-align:center;
+}
+
+.contact-section .form-box input {
+	padding-bottom:15px;
+	margin-bottom:40px;
+}
+
+.contact-section .form-box .textarea textarea {
+	height:170px;
+}
+
+.contact-section .form-box .send-btn {
+	margin-top:40px;
+	text-align:right;
+}
+
+.contact-section .form-box .send-btn button {
+	padding:15px 30px;
+	margin:0; border:0;
+	background-color:#b1c936;
+	color:#fff;
+	cursor:pointer;
+}
+
+
+/*푸터영역*/
+
+.footer {
+	margin-top:100px;
+	text-align:center;
+}
+
+.footer p {
+	text-align:center;
+	margin:20px 0;
+	color:#666;
+}
+
+
+
+
+
+/*테블릿용 CSS 768px*/
+@media all and (min-width:768px){
+/* divider 부분 CSS */
+.divider {
+	margin-top:120px;
+}
+
+.m-divider {
+	margin-top:120px
+}
+
+/* 태블릿 헤더영역 */
+.header {
+	position:static;
+	padding:30px 50px;
+}
+
+.header .logo {
+	float:left;
+}
+
+.header .gnb {
+	display:block !important;
+	position:static;
+	float:right;
+	width:auto;
+	margin-top:20px;
+	background:none;
+	
+}
+
+.header .gnb li {
+	float:left;
+	margin-left:20px;
+	color:#b1c936;
+	border-bottom:0;
+}
+
+.header .gnb li a {
+	color:#b1c936;
+	padding:0;
+	font-size:18px;
+}
+
+.header .gnb li a:hover {
+	font-weight:bold;
+}
+
+.header .menu-toggle-btn {
+	display:none !important;
+}
+
+
+/* 태블릿 디스플레이 영역 */
+
+.display-section {
+	margin-top:100px;
+}
+
+/* 태블릿 프로모션 영역 */
+
+.promotion-section {
+	margin-top:100px;
+}
+
+.promotion-section .promo-list li {
+	float:left;
+	width:23.046875%;
+	/* 177px/768 x100 */
+	margin-left: 2.604166666666667%;
+	/*20px/768 x 100 = 퍼센트 값*/
+	margin-top:0;
+}
+
+.promotion-section .promo-list li:first-child {
+	margin-left:0;
+}
+
+
+/* 태블릿 포토영역 */
+
+.photo-section {
+	margin-top:110px;
+}
+
+.photo-section .sec-tit {
+	margin-bottom:70px;
+}
+
+.photo-section .photo-list li {
+	float:left;
+	width:50%;
+}
+
+
+/* 태블릿 블로그 영역 */
+
+.blog-section {
+	margin-top:100px;
+}
+
+.blog-section .sec-tit {
+	margin-bottom:70px;
+}
+
+.blog-section .blog-list li {
+	float:left;
+	width:31.51041666666667%;
+	/* 242px/768px x 100 */
+	margin-left: 2.604166666666667%;
+	/*20px/768 x 100 = 퍼센트 값*/
+	margin-top:0;
+}
+
+.blog-section .blog-list li:first-child {
+	margin-left:0;
+}
+
+
+/* 태블릿 연락처 영역 */
+
+.contact-section {
+	margin-top:100px;
+}
+
+.contact-section .sec-tit {
+	margin-bottom:80px;
+}
+
+.contact-section .form-box .form, .contact-section .form-box .textarea {
+	float:left;
+	width:48.69791666666667%;
+	/* 374px/768px *100 */
+}
+
+.contact-section .form-box .form {
+	margin-right:2.604166666666667%;
+	/*20px/768 x 100 = 퍼센트 값*/
+}
+
+.contact-section .form-box .form input:last-child {
+	margin-bottom:0;
+}
+
+/* 태블릿 푸터 영역 */
+
+.footer {
+	margin:40px 0;
+}
+
+
+	
+}
+
+
+
+/*데스크탑용 CSS 1132px*/
+@media all and (min-width:1132px){
+	/*디스플레이 영역*/
+	.display-section{
+		text-align:left;
+	}
+	
+	.display-section .sec-tit{
+		float:left;
+		margin-bottom:0;
+	}
+	
+	.display-section .desc{
+		position:relative;
+		float:right;
+		padding-left:20px;
+		font-family:'Nanum Gothic', sans-serif;
+		color:#7e7e7e;
+		line-height:1.9;
+	}
+	
+	.display-section .desc:before{
+		display:block;
+		position:absolute;
+		top:9px;
+		left:0;
+		width:2px;
+		height:44px;
+		background:#7e7e7e;
+		content:"";
+	}
+	
+	/*프로모션 영역*/
+	
+	.promotion-section .promo-list li{
+		width:23.67491166077739%;
+		/* 268px/1132 x 100 */
+		margin-left:1.76678445229682%;
+		/* 20px/1132px x 100 */
+	}
+	
+	/*포토 영역*/
+	.photo-section .sec-tit{
+		text-align:left;
+	}
+	.photo-section .photo-list li{
+		width:25%;
+	}
+	
+	/*블로그 영역*/
+	.blog-section .sec-tit{
+		float:left;
+		margin-bottom:0;
+	}
+	
+	.blog-section .blog-list{
+		float:right;
+		width:74.5583038869258%;
+		/* 844px/1132px x 100 */
+	}
+	.blog-section .blog-list li{
+		width:31.75355450236967%;
+		/* 268px/844px x 100 */
+		margin-left:2.369668246445498%;
+		/* 20px/844 x 100 */
+	}
+	
+	/*연락처 영역*/
+	.contact-section .sec-tit{
+		float:left;
+		margin-bottom:0;
+	}
+	.contact-section .form-box{
+		float:right;
+		width:74.5583038869258%;
+		/* 844px/1132 x 100 */
+	}
+	.contact-section .form-box .form, .contact-section .form-box .textarea{
+		width:48.81516587677725%;
+		/* 412px/844 x 100 */
+	}
+	.contact-section .form-box .form{
+		margin-right:2.369668246445498%;
+		/* 20px/844 x 100 */
+	}	
+	
+}

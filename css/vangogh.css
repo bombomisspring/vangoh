@@ -1,0 +1,282 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Buenard:400,700|Nanum+Gothic:400,700,800&display=swap&subset=korean');
+/*
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Buenard', serif;
+*/
+
+
+/* reset CSS */
+*{margin:0; padding:0;}
+li {list-style:none;}
+img {border:none;}
+a {text-decoration:none;}
+
+
+/* a 링크 CSS*/
+a:link {text-decoration:none; color:#333;}
+a:visited {color:#333;}
+a:hover {color:#855c1c;}
+a:active {color:#333;}
+
+
+/* 전체 레이아웃 적용할 CSS */
+.wrap {
+	width:940px; 
+	margin:0 auto;
+	position:relative;
+}
+body {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size:14px;
+	color:#333;
+}
+
+header {padding:20px 0 10px;}/* top left&right bottom */
+
+header p {
+	font-family: 'Buenard', serif; 
+	font-size:16px;
+	color:brown;
+	position:absolute;
+	right:0;
+	bottom:20px;
+}
+
+#visual {
+	padding:40px 0;
+	background-image:url('../images01/pt.gif');
+}
+
+#visual figure:nth-child(2) {
+	position:absolute;
+	right:0; top:0;
+}
+#visual figure:nth-child(3) {
+	position:absolute;
+	right:0; bottom:0;
+}
+
+#visual figure:nth-child(1) figcaption {
+	position:absolute;
+	left:0; top:0;
+	background-color:rgba(0,0,0,0.4);
+	color:#fff;
+	padding:50px;
+	height:292px;
+}
+
+#visual figure:nth-child(1) figcaption p:first-child {
+	font-size:30px;
+	font-family: 'Buenard', serif;
+}
+
+#visual figure:nth-child(1) figcaption p:nth-child(2) {
+	font-size:26px;
+}
+
+#visual figure:nth-child(1) figcaption p:nth-child(3) {
+	margin-top:20px;
+	line-height:24px;
+}
+
+#visual figure:nth-child(1) figcaption p:last-child {
+	margin-top:15px;
+	text-align:right;
+}
+
+#visual figure:nth-child(2) figcaption {
+	background-color:rgba(0,0,0,0.5);
+	padding:10px 15px;
+	position:absolute;
+	left:0; top:85px;
+	color:#fff;
+	width:258px;
+	font-family: 'Buenard', serif;
+}
+
+#visual figure:nth-child(3) figcaption {
+	position:absolute;
+	left:10px; top:10px;
+	color:#fff;
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+	width:258px;
+	height:117px;
+	border: 4px solid #fff;
+}
+
+#visual figure:nth-child(3) figcaption span {
+	position:absolute;
+	top:35px; right:70px;
+}
+
+/* story 영역 CSS */
+
+#story {background-color:#855c1c;}
+#story img {display:block;}
+#story p:nth-of-type(1) {
+	position:absolute;
+	top:18px; left:350px;
+	font-size:24px;
+	font-weight:bold;
+	font-family:'Buenard', serif;
+}
+
+
+#story p:nth-of-type(2) {
+	position:absolute;
+	top:58px; left:470px;
+	font-size:16px;
+	font-weight:bold;
+}
+
+#story p:nth-of-type(3) {
+	position:absolute;
+	text-align:right;
+	top:32px; right:0;
+	font-size:20pt;
+	font-weight:bold;
+	font-family:'Buenard', serif;
+}
+
+
+/* gallery 영역 CSS */
+
+#gallery {
+	background-color:#ffdda7;
+	padding:40px 0;
+	border-bottom:1px solid #ffdda7;
+}
+
+#gallery .title {
+	font-size:20px;
+	font-weight:bold;
+	background-image:url('../images01/line.gif');
+	background-repeat:repeat-x;
+	margin-bottom:30px;
+}
+#gallery .title span {
+	background-color:#ffdda7;
+	padding-right:10px;
+}
+
+#gallery ul:after {
+	content:'';
+	clear:both;
+	display:block;
+	height:0;
+	visibility:hidden;
+	
+}
+
+#gallery ul li {
+	float:left;
+	margin:0 35px 20px 0;
+}
+
+#gallery ul li:nth-child(3n) {
+/* li 태그 중 3의 배수 번째에 위치한 것 */
+	margin-right:0;
+}
+
+#gallery ul li p {
+	margin-top:6x;
+	font-weight:bold;
+	font-size:12px;
+}
+
+#latest {
+	padding:40px 0;
+}
+
+#latest .title {
+	font-size:20px;
+	font-weight:bold;
+	background-image:url('../images01/line.gif');
+	background-repeat:repeat-x;
+	margin-bottom:30px;	
+}
+
+#latest .title span {
+	background-color:#fff;
+	padding-right:10px;
+	/* font-family:'Nanum Gothic', sans-serif, 'Buenard', serif; */
+}
+
+#latest article {
+	padding-bottom:60px;
+}
+
+#latest article:after {
+	content:'';
+	clear:both;
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+#latest article>div {float:left;}
+
+#latest article>div:first-child {
+	width:610px;
+	margin-right:40px;
+}
+
+#latest article>div:first-child div {
+	position:relative;	
+}
+
+#latest article>div:first-child div:nth-child(2) {
+	margin-bottom:20px;
+}
+
+#latest article>div:first-child div dl {
+	position:absolute;
+	left:180px;
+	top:0;
+}
+
+#latest article>div:first-child div dl dt {
+	color:#000;
+	font-weight:bold;
+	margin-bottom:5px;
+	font-size:16px;
+}
+
+#latest article>div:first-child div dl dd {
+	line-height:1.5;
+}
+
+#latest article>div:last-child {width:290px;}
+
+#latest article>div:last-child figure {
+	position:relative;
+}
+
+#latest article>div:last-child figure figcaption {
+	background-color:rgba(0,0,0,0.5);
+	padding:10px 30px;
+	color:#fff;
+	top:90px; left:0;
+	position:absolute;
+	font-size:16px;
+}
+
+#bnr {
+	background-color:#fff;
+}
+
+#bnr img {
+	display:block;
+	margin:0 auto;
+}
+
+footer {padding:20px 0;}
+footer a {color:#666;}
+footer span {font-weight:bold;}
+address {text-decoration:none; font-style:normal;}
+
+
+
